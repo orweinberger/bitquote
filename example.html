@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="bundle.js"></script>
+  <script>
+    var bitavg = require('./lib/bitcoinaverage');
+    var options = {"fiat":"ILS", "fiatSymbol": "₪"}
+    bitavg.getlast(options, function (bitdata) {
+      init();
+    })
+  </script>
+  <title></title>
+</head>
+<body>
+
+</body>
+</html>
