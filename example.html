@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="bundle.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="bitquote.js"></script>
+  <link rel="stylesheet" href="bitquote.css" type="text/css" />
   <script>
-    var bitavg = require('./lib/bitcoinaverage');
-    var options = {"fiat":"ILS", "fiatSymbol": "₪"}
-    bitavg.getlast(options, function (bitdata) {
-      init();
-    })
+    var options = { "fiat":"USD", "fiatSymbol": "$", "container": "bitquote" }
+    initialize(options);
   </script>
   <title></title>
 </head>
 <body>
-
+<div id="bitquote"></div>
 </body>
 </html>
