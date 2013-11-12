@@ -1,5 +1,5 @@
 .bitquote {
-  width:230px;
+  width:180px;
   display:block;
   background: #f2f5f6; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -22,11 +22,15 @@
   float:left
 }
 
+.bitquote-logo img {
+  width:45px;
+}
+
 .bitquote-price {
   float:right;
   width:auto;
   font-weight:bold;
-  font-size:32px;
+  font-size:30px;
   font-family:Sintony;
   color:#4B4B4B;
   margin:2px 10px 0 0;
@@ -38,12 +42,14 @@
 
 .askbidParent {
   margin-right:10px;
+  clear:right;
+  white-space:nowrap;
 }
 
 .bitquote-bid {
   float:right;
   font-family:Sintony;
-  font-size:11px;
+  font-size:12px;
   color:#999;
   margin-right:3px;
 }
