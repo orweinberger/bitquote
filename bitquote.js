@@ -28,12 +28,14 @@ function initialize(options) {
 }
 
 function adjustWidth(container) {
-  var containerWidth = $(container).width();
-  console.log('changing width' + containerWidth / 8);
-  $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / 8));
-  $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / 16.7));
-  $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / 16.7));
-  $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / 5.3));
+  $(document).ready(function () {
+    var containerWidth = $(container).width();
+    console.log('changing width' + containerWidth / 8);
+    $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / 8));
+    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / 16.7));
+    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / 16.7));
+    $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / 5.3));
+  });
 }
 
 function updateQuotes(bitOptions) {
