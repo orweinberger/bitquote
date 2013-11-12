@@ -1,5 +1,6 @@
 #bitquote {
-  width:210px;
+  width:220px;
+  display:block;
   background: #f2f5f6; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjVmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM3JSIgc3RvcC1jb2xvcj0iI2UzZWFlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOGQ3ZGMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -12,23 +13,23 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-8 */
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border: solid 1px #999
+  border: solid 1px #999;
+  cursor:pointer;
 }
 
 .bitquote-logo {
-  padding:5px;
+  padding:2px 0 2px 10px;
   float:left
 }
 
 .bitquote-price {
   float:right;
-  width:80px;
+  width:auto;
   font-weight:bold;
-  font-size:22px;
+  font-size:32px;
   font-family:Sintony;
-  color:#000;
-  margin-right:10px;
-  margin-top:10px;
+  color:#4B4B4B;
+  margin:2px 10px 0 0;
 }
 
 .clearboth {
@@ -36,7 +37,7 @@
 }
 
 .askbidParent {
-  margin:17px;
+  margin-right:10px;
 }
 
 .bitquote-bid {
@@ -44,7 +45,7 @@
   font-family:Sintony;
   font-size:11px;
   color:#999;
-  margin-right:5px;
+  margin-right:3px;
 }
 .bitquote-ask {
   font-family:Sintony;

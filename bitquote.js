@@ -6,6 +6,7 @@ function initialize(options) {
     var askbidParent = $('<div class="askbidParent"></div>');
     $(askbidParent).appendTo(container);
     $('<div class="bitquote-price"></div>');
+    $('<a href="' + options.href + '" id="bitquotehref"></a>').appendTo('body');
     $('<div class="bitquote-ask"></div>').appendTo(askbidParent);
     $('<div class="bitquote-bid"></div>').appendTo(askbidParent);
     $('<div class="clearboth"></div>').appendTo(container);
@@ -13,4 +14,10 @@ function initialize(options) {
     $(".bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
     $(".bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
   });
+
 }
+$(document).ready(function () {
+  $('#' + options.container).on('click', function (e) {
+    window.location = options.href;
+  });
+});
