@@ -21,10 +21,10 @@
     }
   </style>
   <script>
-    var options = { "fiat":"USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com/", autoUpdate: true }
+    var options = { "fiat":"USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com/", "autoUpdate": true, "autoResize": true }
     initialize(options);
 
-    var optionsILS = { "fiat":"ILS", "fiatSymbol": "₪", "container": "bitquoteILS", "href": "https://bitcoinaverage.com/#ILS", autoUpdate: true }
+    var optionsILS = { "fiat":"ILS", "fiatSymbol": "₪", "container": "bitquoteILS", "href": "https://bitcoinaverage.com/#ILS", "autoUpdate": true, "autoResize": true }
     initialize(optionsILS);
   </script>
   <title>Bitquote</title>
@@ -58,11 +58,12 @@
         class="octicon octicon-link"></span></a>BitQuote example page</h3>
 
     <p>
-
+    <div style="width:230px;">
     <div id="bitquote" class="bitquote"></div>
     <br/>
 
     <div id="bitquoteILS" class="bitquote"></div>
+</div>
     </p>
   </section>
 </div>
