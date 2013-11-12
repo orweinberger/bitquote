@@ -1,5 +1,15 @@
 var bitQuotes = [];
+
 function initialize(options) {
+  var options = $.extend({
+    "fiat": "USD",
+    "fiatSymbol": "$",
+    "container": "bitquote",
+    "href": "https://bitcoinaverage.com/",
+    "autoUpdate": true,
+    "updateInterval": 60000,
+    "autoResize": true
+  }, options);
   bitQuotes.push(options);
   var container = '#' + options.container;
   $.get("http://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
@@ -19,14 +29,18 @@ function initialize(options) {
       });
     }
   });
+
+  setInterval(function () {
+    updateQuotes(bitQuotes);
+  }, options.updateInterval);
 }
 
 function adjustWidth(container, symbolWidth) {
   $(document).ready(function () {
     var containerWidth = $(container).width();
-    $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / (8+symbolWidth/2)));
-    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (18+symbolWidth)));
-    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (18+symbolWidth)));
+    $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / (8 + symbolWidth / 2)));
+    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (18 + symbolWidth)));
+    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (18 + symbolWidth)));
     $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / (5.3)));
   });
 }
@@ -56,7 +70,3 @@ function updateQuotes(bitOptions) {
   })
 }
 
-//Update quotes
-setInterval(function () {
-  updateQuotes(bitQuotes);
-}, 60000)

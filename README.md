@@ -14,8 +14,7 @@ To see it working go to my [github page](http://orweinberger.github.io/bitquote/
   <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" media="screen" href="https://rawgithub.com/orweinberger/bitquote/master/bitquote.css">
   <script>
-    var options = { "fiat":"USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com/", autoUpdate: true }
-    initialize(options);
+    initialize();
   </script>
   </head>
   <body>
@@ -33,6 +32,7 @@ options {
   "autoUpdate": true, // Set this to true if you would like to have the widget auto update every 60 seconds
   "href": "http://www.bitcoinaverage.com" // link to redirect to if widget is clicked on, if you don't want to use this functionality please remove this option completely
   "autoResize": true // Set this to true if you want the script to attempt and resize the bitcoin image, bid/ask and price size according to their container
+  "updateInterval": 120000 // Please try to keep this value above 60000 (60 seconds)
 }
 ```
 
