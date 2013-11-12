@@ -4,6 +4,24 @@ An easy to embed bitcoin to fiat widget with data taken from http://www.bitcoina
 
 To see it working go to my [github page](http://orweinberger.github.io/bitquote/)
 
+###Quick start
+```
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="bitquote.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="bitquote.css" type="text/css"/>
+<script>
+    var options = { "fiat": "USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com$
+    initialize(options);
+
+    var optionsILS = { "fiat": "ILS", "fiatSymbol": "₪", "container": "bitquoteILS", "href": "https://bitcoinavera$
+    initialize(optionsILS);
+</script>
+```
+
+
+###Options
+
 ```
 options {
   "fiat": "USD", // The fiat we want to convert to
