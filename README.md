@@ -9,7 +9,7 @@ options {
   "fiat": "USD", // The fiat we want to convert to
   "fiatSymbol": "$", // The fiat symbol
   "autoUpdate": true, // Set this to true if you would like to have the widget auto update every 60 seconds
-  "href": "http://www.bitcoinaverage.com" // link to redirect to if widget is clicked on
+  "href": "http://www.bitcoinaverage.com" // link to redirect to if widget is clicked on, if you don't want to use this functionality please remove this option completely
 }
 ```
 
