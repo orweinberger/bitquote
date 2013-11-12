@@ -23,16 +23,18 @@ $(document).ready(function () {
 });
 
 function updateQuotes(bitOptions) {
-  $(bitOptions).each(function (options){
-    $.get("http://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
-      $("#" + options.container + " .bitquote-price").html(options.fiatSymbol + data.last);
-      $("#" + options.container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
-      $("#" + options.container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
-    });
+  $.each(bitOptions, function (i, options) {
+    if (options.autoUpdate) {
+      $.get("http://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
+        $("#" + options.container + " .bitquote-price").html(options.fiatSymbol + data.last);
+        $("#" + options.container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
+        $("#" + options.container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
+      });
+    }
   })
 }
 
-//Update quote
-setInterval(function() {
+//Update quotes
+setInterval(function () {
   updateQuotes(bitQuotes);
-},60000)
+}, 60000)
