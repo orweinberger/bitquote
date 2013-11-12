@@ -9,7 +9,13 @@
   <script src="https://raw.github.com/orweinberger/bitquote/master/bitquote.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="https://raw.github.com/orweinberger/bitquote/master/bitquote.css">
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <script>
+    var options = { "fiat":"USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com/" }
+    initialize(options);
 
+    var optionsILS = { "fiat":"ILS", "fiatSymbol": "₪", "container": "bitquoteILS", "href": "https://bitcoinaverage.com/#ILS" }
+    initialize(optionsILS);
+  </script>
   <title>Bitquote</title>
 </head>
 

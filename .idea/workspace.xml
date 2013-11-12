@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fff73dc-f47c-47ee-b230-d8a5c7f3b1aa" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/bitquote.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="bitquote.iws" />
@@ -28,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="126" selection-start="489" selection-end="489" vertical-scroll-proportion="0.19014084" vertical-offset="0" max-vertical-offset="1260">
+            <state line="17" column="11" selection-start="905" selection-end="905" vertical-scroll-proportion="0.23239437" vertical-offset="108" max-vertical-offset="1368">
               <folding />
             </state>
           </provider>
@@ -163,7 +171,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="126" selection-start="489" selection-end="489" vertical-scroll-proportion="0.19014084" vertical-offset="0" max-vertical-offset="1260">
+        <state line="17" column="11" selection-start="905" selection-end="905" vertical-scroll-proportion="0.23239437" vertical-offset="108" max-vertical-offset="1368">
           <folding />
         </state>
       </provider>
