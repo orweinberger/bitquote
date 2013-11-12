@@ -44,8 +44,9 @@ function createDOM(container, callback) {
 }
 
 function updateQuotes(bitOptions) {
-  var container = '#' + options.container;
+
   $.each(bitOptions, function (i, options) {
+    var container = '#' + options.container;
     if (options.autoUpdate) {
       $.get("http://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
         $(container + " .bitquote-price").html(options.fiatSymbol + data.last);
