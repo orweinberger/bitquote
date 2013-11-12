@@ -15,12 +15,15 @@ function initialize(options) {
     $("#" + options.container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
     $("#" + options.container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
   });
-}
-$(document).ready(function () {
-  $('#' + options.container).on('click', function (e) {
-    window.location = options.href;
+  $(document).ready(function () {
+    if (options.href) {
+      $('#' + options.container).on('click', function (e) {
+        window.location = options.href;
+      });
+    }
   });
-});
+}
+
 
 function updateQuotes(bitOptions) {
   $.each(bitOptions, function (i, options) {
