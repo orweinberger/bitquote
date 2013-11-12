@@ -9,10 +9,15 @@
   <script>
     var options = { "fiat":"USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com/" }
     initialize(options);
+
+    var optionsILS = { "fiat":"ILS", "fiatSymbol": "₪", "container": "bitquoteILS", "href": "https://bitcoinaverage.com/" }
+    initialize(optionsILS);
   </script>
   <title></title>
 </head>
 <body>
-<div id="bitquote"></div>
+<div id="bitquote" class="bitquote"></div>
+<br />
+<div id="bitquoteILS" class="bitquote"></div>
 </body>
 </html>
