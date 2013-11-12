@@ -32,6 +32,7 @@ options {
   "fiatSymbol": "$", // The fiat symbol
   "autoUpdate": true, // Set this to true if you would like to have the widget auto update every 60 seconds
   "href": "http://www.bitcoinaverage.com" // link to redirect to if widget is clicked on, if you don't want to use this functionality please remove this option completely
+  "autoResize": true // Set this to true if you want the script to attempt and resize the bitcoin image, bid/ask and price size according to their container
 }
 ```
 
