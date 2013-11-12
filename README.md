@@ -19,7 +19,7 @@ To see it working go to my [github page](http://orweinberger.github.io/bitquote/
   </script>
   </head>
   <body>
-    <div id="bitquote"></div>
+    <div id="bitquote" class="bitquote"></div>
   </body>
   </html>
 ```
