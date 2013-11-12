@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6ccfd9-99f0-43b2-bb28-2a991c4bc981" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/bitquote.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitquote.css" afterPath="$PROJECT_DIR$/bitquote.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitquote.js" afterPath="$PROJECT_DIR$/bitquote.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.html" afterPath="$PROJECT_DIR$/example.html" />
     </list>
     <ignored path="bitquote.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bitquote.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bitquote.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bitquote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="44" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.61433446" vertical-offset="0" max-vertical-offset="1098">
+            <state line="30" column="44" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bitquote.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bitquote.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bitquote.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="45" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1206">
+            <state line="1" column="18" selection-start="30" selection-end="30" vertical-scroll-proportion="0.02078522" vertical-offset="0" max-vertical-offset="1206">
               <folding>
-                <element signature="e#166#913#2" expanded="true" />
+                <element signature="e#170#917#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +91,8 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/example.html" />
-        <option value="$PROJECT_DIR$/bitquote.css" />
         <option value="$PROJECT_DIR$/bitquote.js" />
+        <option value="$PROJECT_DIR$/bitquote.css" />
       </list>
     </option>
   </component>
@@ -233,6 +238,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bitquote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="44" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="166" selection-start="761" selection-end="761" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="522">
@@ -242,17 +254,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bitquote.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="45" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1206">
+        <state line="1" column="18" selection-start="30" selection-end="30" vertical-scroll-proportion="0.02078522" vertical-offset="0" max-vertical-offset="1206">
           <folding>
-            <element signature="e#166#913#2" expanded="true" />
+            <element signature="e#170#917#2" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitquote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="44" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.61433446" vertical-offset="0" max-vertical-offset="1098">
-          <folding />
         </state>
       </provider>
     </entry>
