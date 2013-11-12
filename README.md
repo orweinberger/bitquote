@@ -2,6 +2,8 @@
 
 An easy to embed bitcoin to fiat widget with data taken from http://www.bitaverage.com/
 
+To see it working go to my [github page](http://orweinberger.github.io/bitquote/)
+
 ```
 options {
   "fiat": "USD", // The fiat we want to convert to
