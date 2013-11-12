@@ -8,7 +8,7 @@ function initialize(options) {
       $(container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
       $(container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
       if (options.autoResize)
-        adjustWidth(container);
+        adjustWidth(container, options.fiatSymbol.length);
     });
 
   });
@@ -21,13 +21,14 @@ function initialize(options) {
   });
 }
 
-function adjustWidth(container) {
+function adjustWidth(container, symbolWidth) {
   $(document).ready(function () {
     var containerWidth = $(container).width();
-    $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / 8));
-    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / 18));
-    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / 18));
-    $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / 5.3));
+    console.log(symbolWidth);
+    $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / (8+symbolWidth/2)));
+    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (18+symbolWidth)));
+    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (18+symbolWidth)));
+    $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / (5.3)));
   });
 }
 
@@ -44,7 +45,6 @@ function createDOM(container, callback) {
 }
 
 function updateQuotes(bitOptions) {
-
   $.each(bitOptions, function (i, options) {
     var container = '#' + options.container;
     if (options.autoUpdate) {
