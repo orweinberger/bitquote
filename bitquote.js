@@ -24,10 +24,9 @@ function initialize(options) {
 function adjustWidth(container, symbolWidth) {
   $(document).ready(function () {
     var containerWidth = $(container).width();
-    console.log(symbolWidth);
     $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / (8+symbolWidth/2)));
-    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (18+symbolWidth)));
-    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (18+symbolWidth)));
+    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (19+symbolWidth)));
+    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (19+symbolWidth)));
     $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / (5.3)));
   });
 }
