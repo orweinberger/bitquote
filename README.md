@@ -5,20 +5,24 @@ An easy to embed bitcoin to fiat widget with data taken from http://www.bitcoina
 To see it working go to my [github page](http://orweinberger.github.io/bitquote/)
 
 ###Quick start
+
 ```
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="bitquote.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="bitquote.css" type="text/css"/>
-<script>
-    var options = { "fiat": "USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com$
+  <html>
+  <head>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://rawgithub.com/orweinberger/bitquote/master/bitquote.js" type="text/javascript"></script>
+  <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://rawgithub.com/orweinberger/bitquote/master/bitquote.css">
+  <script>
+    var options = { "fiat":"USD", "fiatSymbol": "$", "container": "bitquote", "href": "https://bitcoinaverage.com/", autoUpdate: true }
     initialize(options);
-
-    var optionsILS = { "fiat": "ILS", "fiatSymbol": "₪", "container": "bitquoteILS", "href": "https://bitcoinavera$
-    initialize(optionsILS);
-</script>
+  </script>
+  </head>
+  <body>
+    <div id="bitquote"></div>
+  </body>
+  </html>
 ```
-
 
 ###Options
 
