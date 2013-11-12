@@ -29,7 +29,6 @@ function initialize(options) {
       });
     }
   });
-
   setInterval(function () {
     updateQuotes(bitQuotes);
   }, options.updateInterval);
@@ -39,21 +38,15 @@ function adjustWidth(container, symbolWidth) {
   $(document).ready(function () {
     var containerWidth = $(container).width();
     $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / (8 + symbolWidth / 2)));
-    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (18 + symbolWidth)));
-    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (18 + symbolWidth)));
+    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (17 + symbolWidth)));
+    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (17 + symbolWidth)));
     $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / (5.3)));
   });
 }
 
 function createDOM(container, callback) {
-  $('<div class="bitquote-logo"><img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" /></div>').appendTo(container);
-  $('<div class="bitquote-price"></div>').appendTo(container);
-  var askbidParent = $('<div class="askbidParent"></div>');
-  $(askbidParent).appendTo(container);
-  $('<div class="bitquote-price"></div>');
-  $('<div class="bitquote-ask"></div>').appendTo(askbidParent);
-  $('<div class="bitquote-bid"></div>').appendTo(askbidParent);
-  $('<div class="clearboth"></div>').appendTo(container);
+  var baseHTML = '<div class="bitquote-logo"><img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" /></div><div class="bitquote-price"></div><div class="askbidParent"><div class="bitquote-ask"></div><div class="bitquote-bid"></div></div><div class="clearboth"></div>'
+  $(container).append(baseHTML);
   return callback();
 }
 
