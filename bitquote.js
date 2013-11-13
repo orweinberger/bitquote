@@ -7,7 +7,7 @@ function initialize(options) {
     "container": "bitquote",
     "href": "https://bitcoinaverage.com/",
     "autoUpdate": true,
-    "updateInterval": 60000,
+    "updateInterval": 6000,
     "autoResize": true
   }, options);
   bitQuotes.push(options);
@@ -55,9 +55,18 @@ function updateQuotes(bitOptions) {
     var container = '#' + options.container;
     if (options.autoUpdate) {
       $.get("http://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
-        $(container + " .bitquote-price").html(options.fiatSymbol + data.last);
-        $(container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
-        $(container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
+        if ($(container + " .bitquote-price").text() != options.fiatSymbol + data.last)
+          $(container + " .bitquote-price").fadeOut(600, function () {
+            $(this).text(options.fiatSymbol + data.last).fadeIn(600);
+          })
+        if ($(container + " .bitquote-bid").text() != "Bid: " + options.fiatSymbol + data.bid)
+          $(container + " .bitquote-bid").fadeOut(600, function () {
+            $(this).text("Bid: " + options.fiatSymbol + data.bid).fadeIn(600);
+          });
+        if ($(container + " .bitquote-ask").text() != "Ask: " + options.fiatSymbol + data.ask)
+          $(container + " .bitquote-ask").fadeOut(600, function () {
+            $(this).text("Ask: " + options.fiatSymbol + data.ask).fadeIn(600);
+          });
       });
     }
   })
