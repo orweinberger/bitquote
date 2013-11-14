@@ -12,7 +12,7 @@ function initialize(options) {
   }, options);
   bitQuotes.push(options);
   var container = '#' + options.container;
-  $.get("http://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
+  $.get("https://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
     createDOM(container, function () {
       $(container + " .bitquote-price").html(options.fiatSymbol + data.last);
       $(container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
