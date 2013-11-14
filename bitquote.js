@@ -54,7 +54,7 @@ function updateQuotes(bitOptions) {
   $.each(bitOptions, function (i, options) {
     var container = '#' + options.container;
     if (options.autoUpdate) {
-      $.get("http://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
+      $.get("https://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
         if ($(container + " .bitquote-price").text() != options.fiatSymbol + data.last)
           $(container + " .bitquote-price").fadeOut(600, function () {
             $(this).text(options.fiatSymbol + data.last).fadeIn(600);
