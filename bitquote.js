@@ -5,20 +5,29 @@ function initialize(options) {
     "fiat": "USD",
     "fiatSymbol": "$",
     "container": "bitquote",
+    "showBidAsk": true,
     "href": "https://bitcoinaverage.com/",
     "autoUpdate": true,
-    "updateInterval": 6000,
+    "updateInterval": 162000,
     "autoResize": true
   }, options);
   bitQuotes.push(options);
   var container = '#' + options.container;
   $.get("https://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
-    createDOM(container, function () {
+    createDOM(options, function () {
       $(container + " .bitquote-price").html(options.fiatSymbol + data.last);
-      $(container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
-      $(container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
+      if (options.showBidAsk) {
+        if (options.fiatSymbol <= 2) {
+          $(container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
+          $(container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
+        }
+        else {
+          $(container + " .bitquote-bid").html("Bid: " + data.bid);
+          $(container + " .bitquote-ask").html("Ask: " + data.ask);
+        }
+      }
       if (options.autoResize)
-        adjustWidth(container, options.fiatSymbol.length);
+        adjustWidth(options, options.fiatSymbol + data.bid);
     });
 
   });
@@ -34,18 +43,38 @@ function initialize(options) {
   }, options.updateInterval);
 }
 
-function adjustWidth(container, symbolWidth) {
+function adjustWidth(options, price) {
+  var container = '#' + options.container;
+  var mainpriceLength = price.replace(/[\. ]+/g, "").length;
+  if (options.fiatSymbol.length >=2) {
+    var subpriceLength = price.replace(/[\. ]+/g, "").length - options.fiatSymbol.replace(/[\. ]+/g, "").length;
+    console.log(price.replace(/[\. ]+/g, "").length, options.fiatSymbol.length,  subpriceLength);
+  }
+  else {
+    var subpriceLength = price.replace(/[\. ]+/g, "").length;
+  }
   $(document).ready(function () {
     var containerWidth = $(container).width();
-    $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / (8 + symbolWidth / 2)));
-    $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (17 + symbolWidth)));
-    $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (17 + symbolWidth)));
-    $(container + ' .bitquote-logo > img').css('width', Math.floor(containerWidth / (5.3)));
+    if (options.showBidAsk) {
+      if (mainpriceLength <= 6)
+        mainpriceLength = 7;
+      $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / mainpriceLength));
+      $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (subpriceLength + 11)));
+      $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (subpriceLength + 11)));
+    }
+    else {
+      $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / mainpriceLength));
+      //$(container + ' .bitquote-price').css('margin', '3% 5% 0 0');
+    }
   });
 }
 
-function createDOM(container, callback) {
-  var baseHTML = '<div class="bitquote-logo"><img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" /></div><div class="bitquote-price"></div><div class="askbidParent"><div class="bitquote-ask"></div><div class="bitquote-bid"></div></div><div class="clearboth"></div>'
+function createDOM(options, callback) {
+  var container = '#' + options.container;
+  if (options.showBidAsk)
+    var baseHTML = '<div class="bitquote-logo"><img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" /></div><div class="bitquote-price"></div><div class="askbidParent"><div class="bitquote-ask"></div><div class="bitquote-bid"></div></div><div class="clearboth"></div>'
+  else
+    var baseHTML = '<div class="bitquote-logo"><img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" /></div><div class="bitquote-price"></div><div class="clearboth"></div>'
   $(container).append(baseHTML);
   return callback();
 }

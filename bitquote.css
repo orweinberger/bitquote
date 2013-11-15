@@ -18,12 +18,13 @@
 }
 
 .bitquote-logo {
-  padding:2px 0 2px 10px;
-  float:left
+  padding:3% 0 3% 3%;
+  float:left;
+  width:20%;
 }
 
 .bitquote-logo img {
-  width:45px;
+  width:100%
 }
 
 .bitquote-price {
@@ -33,7 +34,7 @@
   font-size:30px;
   font-family:Sintony;
   color:#4B4B4B;
-  margin:2px 10px 0 0;
+  padding:2% 3% 0 2%;
 }
 
 .clearboth {
@@ -44,6 +45,8 @@
   margin-right:10px;
   clear:right;
   white-space:nowrap;
+  white-space:nowrap;
+  overflow:hidden;
 }
 
 .bitquote-bid {
@@ -52,10 +55,14 @@
   font-size:12px;
   color:#999;
   margin-right:3px;
+  white-space:nowrap;
+  overflow:hidden;
 }
 .bitquote-ask {
   font-family:Sintony;
   float:right;
+  overflow:hidden;
   font-size:11px;
   color:#999;
+  white-space:nowrap;
 }
