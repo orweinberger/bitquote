@@ -1,8 +1,10 @@
-##BitQuote
+##BitQuote ![Bitquote](http://i.imgur.com/jPtDLCY.png)
 
 An easy to embed bitcoin to fiat widget with data taken from http://www.bitcoinaverage.com/
 
 To see it working go to my [github page](http://orweinberger.github.io/bitquote/)
+
+
 
 ###Quick start
 
