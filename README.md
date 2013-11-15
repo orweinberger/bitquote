@@ -10,6 +10,9 @@ To see it working go to my [github page](http://orweinberger.github.io/bitquote/
 
 ###Quick start
 
+Please note that if you're using the code below you are loading the plugin directly from this repository and will be impacted by any updates made to the code.
+Best practice is to clone this repository and get regular updates by pulling every now and again.
+
 ```
   <html>
   <head>
