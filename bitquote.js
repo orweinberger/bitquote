@@ -8,7 +8,7 @@ function initialize(options) {
     "showBidAsk": true,
     "href": "https://bitcoinaverage.com/",
     "autoUpdate": true,
-    "updateInterval": 6000,
+    "updateInterval": 60000,
     "autoResize": true
   }, options);
   bitQuotes.push(options);
