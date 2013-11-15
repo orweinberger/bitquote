@@ -8,7 +8,7 @@ function initialize(options) {
     "showBidAsk": true,
     "href": "https://bitcoinaverage.com/",
     "autoUpdate": true,
-    "updateInterval": 162000,
+    "updateInterval": 6000,
     "autoResize": true
   }, options);
   bitQuotes.push(options);
@@ -17,7 +17,7 @@ function initialize(options) {
     createDOM(options, function () {
       $(container + " .bitquote-price").html(options.fiatSymbol + data.last);
       if (options.showBidAsk) {
-        if (options.fiatSymbol <= 2) {
+        if (options.fiatSymbol.length <= 2) {
           $(container + " .bitquote-bid").html("Bid: " + options.fiatSymbol + data.bid);
           $(container + " .bitquote-ask").html("Ask: " + options.fiatSymbol + data.ask);
         }
@@ -46,9 +46,8 @@ function initialize(options) {
 function adjustWidth(options, price) {
   var container = '#' + options.container;
   var mainpriceLength = price.replace(/[\. ]+/g, "").length;
-  if (options.fiatSymbol.length >=2) {
+  if (options.fiatSymbol.length >= 2) {
     var subpriceLength = price.replace(/[\. ]+/g, "").length - options.fiatSymbol.replace(/[\. ]+/g, "").length;
-    console.log(price.replace(/[\. ]+/g, "").length, options.fiatSymbol.length,  subpriceLength);
   }
   else {
     var subpriceLength = price.replace(/[\. ]+/g, "").length;
@@ -59,12 +58,11 @@ function adjustWidth(options, price) {
       if (mainpriceLength <= 6)
         mainpriceLength = 7;
       $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / mainpriceLength));
-      $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (subpriceLength + 11)));
-      $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (subpriceLength + 11)));
+      $(container + ' .bitquote-bid').css('font-size', Math.floor(containerWidth / (subpriceLength + 12)));
+      $(container + ' .bitquote-ask').css('font-size', Math.floor(containerWidth / (subpriceLength + 12)));
     }
     else {
       $(container + ' .bitquote-price').css('font-size', Math.floor(containerWidth / mainpriceLength));
-      //$(container + ' .bitquote-price').css('margin', '3% 5% 0 0');
     }
   });
 }
@@ -88,13 +86,19 @@ function updateQuotes(bitOptions) {
           $(container + " .bitquote-price").fadeOut(600, function () {
             $(this).text(options.fiatSymbol + data.last).fadeIn(600);
           })
-        if ($(container + " .bitquote-bid").text() != "Bid: " + options.fiatSymbol + data.bid)
+        if ($(container + " .bitquote-bid").text() != "Bid: " + options.fiatSymbol + data.bid && options.showBidAsk)
           $(container + " .bitquote-bid").fadeOut(600, function () {
-            $(this).text("Bid: " + options.fiatSymbol + data.bid).fadeIn(600);
+            if (options.fiatSymbol.length >= 2)
+              $(this).text("Bid: " + data.bid).fadeIn(600);
+            else
+              $(this).text("Bid: " + options.fiatSymbol + data.bid).fadeIn(600);
           });
-        if ($(container + " .bitquote-ask").text() != "Ask: " + options.fiatSymbol + data.ask)
+        if ($(container + " .bitquote-ask").text() != "Ask: " + options.fiatSymbol + data.ask && options.showBidAsk)
           $(container + " .bitquote-ask").fadeOut(600, function () {
-            $(this).text("Ask: " + options.fiatSymbol + data.ask).fadeIn(600);
+            if (options.fiatSymbol.length >= 2)
+              $(this).text("Ask: " + data.ask).fadeIn(600);
+            else
+              $(this).text("Ask: " + options.fiatSymbol + data.ask).fadeIn(600);
           });
       });
     }

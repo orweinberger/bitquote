@@ -34,6 +34,7 @@ options {
   "href": "http://www.bitcoinaverage.com" // link to redirect to if widget is clicked on, if you don't want to use this functionality please remove this option completely
   "autoResize": true // Set this to true if you want the script to attempt and resize the bitcoin image, bid/ask and price size according to their container
   "updateInterval": 120000 // Please try to keep this value above 60000 (60 seconds)
+  "showBidAsk": true // Show or hide Bid/Ask
 }
 ```
 
