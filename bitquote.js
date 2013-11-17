@@ -84,7 +84,6 @@ function updateQuotes(bitOptions) {
       $.get("https://api.bitcoinaverage.com/ticker/" + options.fiat, function (data) {
         if ($(container + " .bitquote-price").text() != options.fiatSymbol + data.last)
           $(container + " .bitquote-price").fadeOut(600, function () {
-            if (parseInt())
             $(this).text(options.fiatSymbol + data.last).fadeIn(600);
           })
         if ($(container + " .bitquote-bid").text() != "Bid: " + options.fiatSymbol + data.bid && options.showBidAsk)
