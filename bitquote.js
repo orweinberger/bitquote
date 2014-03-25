@@ -34,7 +34,7 @@ function initialize(options) {
   $(document).ready(function () {
     if (options.href) {
       $(container).on('click', function (e) {
-        window.location = options.href;
+        window.open(options.href, '_blank');
       });
     }
   });
