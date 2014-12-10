@@ -46,8 +46,8 @@ options {
 }
 ```
 
-If you found this useful and feel like donating, please send some coins to: 13K9DtTXf5kANesDdK3VSrGPdF4FaYk8nX
+### Buy me a beer
 
+![12idKQBikRgRuZEbtxXQ4WFYB7Wa3hZzhT](http://i.imgur.com/HHQkm9t.png)
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/orweinberger/bitquote/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+12idKQBikRgRuZEbtxXQ4WFYB7Wa3hZzhT
